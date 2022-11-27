@@ -1682,6 +1682,9 @@ kbd {
 .back2top__icon:hover {
   color: #fc6423;
 }
+a.fancybox {
+  cursor: zoom-in;
+}
 .zoomimg-mask {
   position: fixed;
   top: 0;
@@ -1706,13 +1709,6 @@ kbd {
   background-color: #fff;
   cursor: zoom-out;
   will-change: transform;
-}
-.lazyload-block {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  min-width: 30px;
-  min-height: 30px;
 }
 .mode {
   position: relative;
@@ -1897,6 +1893,69 @@ kbd {
   background-color: var(--color-card);
   float: left;
 }
+:root {
+  --color-gradient-begin: rgba(255,255,255,0);
+  --color-gradient-end: #fff;
+}
+html.nightmode {
+  --color-gradient-begin: rgba(43,49,59,0);
+  --color-gradient-end: #2b313b;
+}
+#valine-container code,
+#valine-container pre {
+  background-color: var(--color-gray-200);
+}
+#valine-container .markdown {
+  fill: var(--color-gray-700);
+}
+#valine-container .vnum,
+#valine-container .vbtn,
+#valine-container .vctrl,
+#valine-container .vinput,
+#valine-container .vcount,
+#valine-container .vemoji-btn,
+#valine-container .vpreview-btn,
+#valine-container .vcontent *,
+#valine-container .vpreview *,
+#valine-container a {
+  color: var(--color-gray-700);
+}
+#valine-container .vinput {
+  border-bottom: 1px dashed var(--color-gray-300);
+}
+#valine-container .vcontent.expand::before {
+  color: var(--color-gray-600);
+  background: -webkit-linear-gradient(270deg, var(--color-gradient-begin), var(--color-gradient-end));
+  background: -moz-linear-gradient(270deg, var(--color-gradient-begin), var(--color-gradient-end));
+  background: -o-linear-gradient(270deg, var(--color-gradient-begin), var(--color-gradient-end));
+  background: -ms-linear-gradient(270deg, var(--color-gradient-begin), var(--color-gradient-end));
+  background: linear-gradient(180deg, var(--color-gradient-begin), var(--color-gradient-end));
+}
+#valine-container .vcontent.expand::after {
+  color: var(--color-gray-600);
+  background: var(--color-gradient-end);
+}
+#valine-container .vsys,
+#valine-container .vbtn {
+  background-color: var(--color-gray-250);
+}
+#valine-container .vbtn {
+  border-color: var(--color-gray-250);
+}
+#valine-container .vbtn:hover {
+  border-color: #3090e4;
+  color: #3090e4;
+}
+#valine-container .vwrap {
+  border-color: var(--color-gray-250);
+}
+#valine-container .vlist .vcard .vh {
+  border-bottom: 1px dashed var(--color-gray-250);
+}
+#valine-container .vcode {
+  color: var(--color-gray-900);
+  background-color: var(--color-gray-250);
+}
 .copy-button {
   position: absolute;
   top: 0;
@@ -2010,6 +2069,41 @@ kbd {
   text-align: right;
 }
 .paginator-next__icon {
+  margin-left: 0.3rem;
+}
+.button-plugin {
+  display: inline-block;
+  border: 1px solid #73c8ff;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.75rem;
+  height: 32px;
+  line-height: 1.375;
+  color: #fff;
+  background-color: #73c8ff;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+.button-plugin:hover {
+  color: #fff;
+  background-color: #49b1f5;
+}
+.button-plugin > span {
+  display: inline-block;
+}
+.button-plugin--icon-only {
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+  text-align: center;
+}
+.button-plugin__icon {
+  line-height: 1;
+}
+.button-plugin__icon + .button-plugin__content {
   margin-left: 0.3rem;
 }
 .table-plugin tr {
